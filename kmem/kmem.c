@@ -7,8 +7,7 @@
 
 #include "kmem.h"
 
-const char* kIOKernelMemoryApeture = "IOKernelMemoryApeture";
-const char* kIOKernelMemoryUserClient = "IOKernelMemoryUserClient";
+const char *kIOKernelMemoryApeture    = "IOKernelMemoryApeture";
+const char *kIOKernelMemoryUserClient = "IOKernelMemoryUserClient";
 
 const uint32_t kIOKernelMemoryApetureDefault = 0;
-

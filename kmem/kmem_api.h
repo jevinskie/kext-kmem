@@ -8,28 +8,25 @@
 #ifndef kmem_api_h
 #define kmem_api_h
 
-extern const char* kIOKernelMemoryApeture;
-extern const char* kIOKernelMemoryUserClient;
+extern const char *kIOKernelMemoryApeture;
+extern const char *kIOKernelMemoryUserClient;
 
 extern const uint32_t kIOKernelMemoryApetureDefault;
-
 
 enum {
     kIOKernelMemoryApetureMethodReadVirtual,
     kIOKernelMemoryApetureMethodReadPhysical,
-//    kIOKernelMemoryApetureMethodWriteVirtual,
-//    kIOKernelMemoryApetureMethodWritePhysical,
+    //    kIOKernelMemoryApetureMethodWriteVirtual,
+    //    kIOKernelMemoryApetureMethodWritePhysical,
     kIOKernelMemoryApetureMethodGetKextHeaderAddress,
     kIOKernelMemoryApetureMethodGetKextCodeAddress,
 
     kIOKernelMemoryApetureMethodCount
 };
 
-
 typedef struct {
-    void* address;
+    void *address;
     size_t size;
 } kmem_read_t;
-
 
 #endif /* kmem_api_h */

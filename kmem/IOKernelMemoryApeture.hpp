@@ -3,20 +3,19 @@
 #ifndef IOKernelMemoryApeture_hpp
 #define IOKernelMemoryApeture_hpp
 
+#include "kmem.h"
 #include <IOKit/IOLib.h>
 #include <IOKit/IOService.h>
-#include "kmem.h"
 
 class IOKernelMemoryApeture : IOService {
-    OSDeclareDefaultStructors(IOKernelMemoryApeture)
-    
+    OSDeclareDefaultStructors(IOKernelMemoryApeture);
+
 public:
     virtual bool init(OSDictionary *dictionary = 0) override;
     virtual void free(void) override;
-    
+
     virtual bool start(IOService *provider) override;
     virtual void stop(IOService *provider) override;
-    
 };
 
 #endif
